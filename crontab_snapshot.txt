@@ -1,0 +1,69 @@
+# This line forces cron to interpret all times below as New York time (EST/EDT)
+CRON_TZ=America/New_York
+# All times below are now local New York time.
+
+
+# 12 = 7am on 11/11 (after DST) -> This comment is now just a reminder of what it was when I was on UTC
+
+# 5:17 PM ET
+# 18 17 * * 1-5 /home/ec2-user/cron_scripts/test.sh 2>&1 | mail -s "Test Script" zachary.dietz@alpineglobal.com
+
+# 8:00 AM ET
+0 8 * * 1-5 /home/ec2-user/cron_scripts/pull_volume_data.sh 2>&1 | mail -s "Options Volume Data Cache Script" zachary.dietz@alpineglobal.com
+
+# 8:00 AM ET
+0 8 * * 1-5 /home/ec2-user/cron_scripts/cache_hist_price_data.sh 2>&1 | mail -s "Cache Hist Price Data From CloudQuant" zachary.dietz@alpineglobal.com
+
+# 9:00 AM ET
+0 9 * * 1-5 /home/ec2-user/cron_scripts/test_spdr_connection.sh 2>&1 | mail -s "Test SPDR VPN Working" zachary.dietz@alpineglobal.com
+
+
+# 9:28 AM ET
+28 9 * * 1-5 /home/ec2-user/cron_scripts/scan_large_options_prints.sh 2>&1 | mail -s "Large Options Print Scanner" zachary.dietz@alpineglobal.com
+
+# 9:22 AM ET
+22 9 * * 1-5 /home/ec2-user/cron_scripts/cache_live_vol_data.sh 2>&1 | mail -s "Cache Live Vol Data from Spiderrock" zachary.dietz@alpineglobal.com
+
+# 9:22 AM ET
+22 9 * * 1-5 /home/ec2-user/cron_scripts/cache_live_price_data.sh 2>&1 | mail -s "Cache Live Price Data from Spiderrock" zachary.dietz@alpineglobal.com
+
+# 9:25 AM ET
+25 9 * * 1-5 /home/ec2-user/cron_scripts/top_strikes_snap.sh 2>&1 | mail -s "Top Strikes 5min Snapshot to VBAM" zachary.dietz@alpineglobal.com
+
+# 11:25 AM ET
+25 11 * * 1-5 /home/ec2-user/cron_scripts/check_340pm_imbal_from_yest.sh 2>&1 | mail -s "Checking 340pm Imbal Monitor Snap From Yesterday" zachary.dietz@alpineglobal.com
+
+# 4:01 PM ET
+1 16 * * 1-5 /home/ec2-user/cron_scripts/end_of_day_vol_snapshot.sh 2>&1 | mail -s "End of Day Vol Snap" zachary.dietz@alpineglobal.com
+
+# 3:47 PM ET
+# 47 15 * * 1-5 /home/ec2-user/cron_scripts/mid_day_vol_snapshot.sh 2>&1 | mail -s "347pm Vol Snap" zachary.dietz@alpineglobal.com
+
+# captain condor scan
+# 4:05 PM ET
+5 16 * * 1-5 /home/ec2-user/cron_scripts/scan_for_iron_condor.sh 2>&1 | mail -s "Looking for Captain Condor" zachary.dietz@alpineglobal.com
+# 4:10 PM ET
+10 16 * * 1-5 /home/ec2-user/cron_scripts/scan_for_iron_condor.sh 2>&1 | mail -s "Looking for Captain Condor" zachary.dietz@alpineglobal.com
+# Original: 16 21 UTC -> 4:16 PM ET
+16 16 * * 1-5 /home/ec2-user/cron_scripts/scan_for_iron_condor.sh 2>&1 | mail -s "Looking for Captain Condor" zachary.dietz@alpineglobal.com
+
+# screen for SPX pin
+# 2:00 PM ET
+0 14 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 3:00 PM ET
+0 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 3:30 PM ET
+30 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 3:39 PM ET
+39 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 3:49 PM ET
+49 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 4:00 PM ET
+0 16 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+
+# dash scripts
+20 9 * * 1-5 /home/ec2-user/cron_scripts/run_resvol.sh 2>&1 | mail -s "Resvol Dash" zachary.dietz@alpineglobal.com
+20 9 * * 1-5 /home/ec2-user/cron_scripts/run_resvol_grid.sh 2>&1 | mail -s "Resvol Dash" zachary.dietz@alpineglobal.com
+20 9 * * 1-5 /home/ec2-user/cron_scripts/run_realized.sh 2>&1 | mail -s "Resvol Dash" zachary.dietz@alpineglobal.com
+20 9 * * 1-5 /home/ec2-user/cron_scripts/run_idb_pricer.sh 2>&1 | mail -s "Resvol Dash" zachary.dietz@alpineglobal.com
+
