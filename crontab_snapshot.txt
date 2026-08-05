@@ -56,8 +56,8 @@ CRON_TZ=America/New_York
 30 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
 # 3:39 PM ET
 39 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
-# 3:49 PM ET
-49 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
+# 3:47 PM ET (moved from 3:49 to stay clear of the 15:49-15:51 SpiderRock blackout)
+47 15 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
 # 4:00 PM ET
 0 16 * * 1-5 /home/ec2-user/cron_scripts/screen_for_spx_pin.sh 2>&1 | mail -s "Screen for SPX PIN" zachary.dietz@alpineglobal.com
 
