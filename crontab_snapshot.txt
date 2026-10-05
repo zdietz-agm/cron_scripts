@@ -31,7 +31,7 @@ CRON_TZ=America/New_York
 25 9 * * 1-5 /home/ec2-user/cron_scripts/top_strikes_snap.sh 2>&1 | mail -s "Top Strikes 5min Snapshot to VBAM" zachary.dietz@alpineglobal.com
 
 # 11:25 AM ET
-25 11 * * 1-5 /home/ec2-user/cron_scripts/check_340pm_imbal_from_yest.sh 2>&1 | mail -s "Checking 340pm Imbal Monitor Snap From Yesterday" zachary.dietz@alpineglobal.com
+25 11 * * 1-5 /home/ec2-user/cron_scripts/check_imbal_from_yest.sh 2>&1 | mail -s "Checking 340pm, 350pm and 355pm Imbal Sources From Yesterday" zachary.dietz@alpineglobal.com
 
 # 4:01 PM ET
 1 16 * * 1-5 /home/ec2-user/cron_scripts/end_of_day_vol_snapshot.sh 2>&1 | mail -s "End of Day Vol Snap" zachary.dietz@alpineglobal.com
